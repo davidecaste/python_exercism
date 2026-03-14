@@ -1,0 +1,13 @@
+(import (rnrs))
+
+(define (single x)
+    (cond
+        ((char=? x #\G) #\C)
+        ((char=? x #\C) #\G)
+        ((char=? x #\T) #\A)
+        ((char=? x #\A) #\U)))
+
+(define (dna->rna dna)
+     (string-map single dna))
+
+
